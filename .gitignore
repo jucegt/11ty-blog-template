@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build Directories
+.11ty/
+
+# Logs
+*.log
+
+# Environment Variables
+.env
+
+# Yarn
+yarn.lock
+
+# Misc
+.DS_Store

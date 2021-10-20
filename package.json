@@ -5,7 +5,12 @@
   "repository": "git@github.com:jucegt/11ty-blog-template.git",
   "author": "jucegt <julio2201@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "node -r esm node_modules/@11ty/eleventy/cmd.js --serve",
+    "build": "node -r esm node_modules/@11ty/eleventy/cmd.js"
+  },
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0-beta.2"
+    "@11ty/eleventy": "^1.0.0-beta.2",
+    "esm": "^3.2.25"
   }
 }

@@ -6,8 +6,9 @@
   "author": "jucegt <julio2201@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "node -r esm node_modules/@11ty/eleventy/cmd.js --serve",
-    "build": "node -r esm node_modules/@11ty/eleventy/cmd.js"
+    "11ty:esm": "node -r esm node_modules/@11ty/eleventy/cmd.js",
+    "dev": "yarn 11ty:esm --serve",
+    "build": "yarn 11ty:esm"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.2",

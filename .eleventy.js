@@ -1,4 +1,4 @@
-const eleventy = (config) => {
+export default (config) => {
   return {
     dir: {
       input: 'src',
@@ -9,5 +9,3 @@ const eleventy = (config) => {
     },
   };
 };
-
-export default eleventy;

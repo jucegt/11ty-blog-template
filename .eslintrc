@@ -10,6 +10,11 @@
   "plugins": [
     "prettier"
   ],
+  "rules": {
+    "quotes": ["error", "single"],
+    "no-undef": ["error"],
+    "semi": ["error", "always"]
+  },
   "parserOptions": {
     "sourceType": "module"
   }

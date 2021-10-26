@@ -6,9 +6,18 @@
   "author": "jucegt <julio2201@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write \"**/*.{js,scss}\"",
+    "lint": "eslint . --ext js --fix --max-warnings=0",
     "11ty:esm": "node -r esm node_modules/@11ty/eleventy/cmd.js",
     "dev": "yarn 11ty:esm --serve",
     "build": "yarn 11ty:esm"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn format",
+      "yarn lint"
+    ]
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.2",
@@ -17,6 +26,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "esm": "^3.2.25",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",

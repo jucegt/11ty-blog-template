@@ -1,11 +1,11 @@
 // Plugins
 import amp from '@ampproject/eleventy-plugin-amp';
 
-// Collections
-import posts from './src/includes/collections/posts';
+// Includes
+import collections from './src/includes/collections';
 
 export default (config) => {
-  config.addCollection('posts', posts);
+  collections(config);
 
   config.addPlugin(amp, {
     dir: {

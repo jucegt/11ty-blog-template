@@ -8,7 +8,7 @@
   "scripts": {
     "prepare": "husky install",
     "format": "prettier --write \"**/*.{js,scss}\"",
-    "lint": "eslint . --ext js --fix --max-warnings=0",
+    "lint": "eslint . --fix --max-warnings=0",
     "11ty:esm": "node -r esm node_modules/@11ty/eleventy/cmd.js",
     "dev": "yarn 11ty:esm --serve",
     "build": "yarn 11ty:esm"

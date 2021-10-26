@@ -17,5 +17,6 @@
   },
   "parserOptions": {
     "sourceType": "module"
-  }
+  },
+  "ignorePatterns": ["!.eleventy.js"]
 }

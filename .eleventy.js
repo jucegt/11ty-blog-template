@@ -2,10 +2,12 @@
 import amp from '@ampproject/eleventy-plugin-amp';
 
 // Includes
-import collections from './src/includes/collections';
+// import collections from './src/includes/collections';
+import shortcodes from './src/includes/shortcodes';
 
 export default (config) => {
-  collections(config);
+  // collections(config);
+  shortcodes(config);
 
   config.addPlugin(amp, {
     dir: {

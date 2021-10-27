@@ -1,14 +1,15 @@
-const base = ({ content, config }) => {
+export const render = (data) => {
+  const { content, config } = data;
   return /* html */ `
   <!doctype html>
   <html lang="${config.language}">
     <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <meta name="description" content="This is the AMP Boilerplate.">
-      <title>My AMP Page</title>
+      <meta charset="utf-8" />
+      <meta name="generator" content="eleventy" />
+      <meta name="viewport" content="width=device-width" />
+      ${this.metadata(data)}
       <style amp-custom></style>
-      <link rel="canonical" href=".">
+      <link rel="canonical" href="." />
     </head>
     <body>
       ${content}
@@ -16,5 +17,3 @@ const base = ({ content, config }) => {
   </html>
   `;
 };
-
-export default base;

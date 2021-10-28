@@ -9,6 +9,9 @@ export default (config) => {
   // collections(config);
   shortcodes(config);
 
+  config.ignores.add('./src/admin');
+  config.addPassthroughCopy({ './src/admin': true });
+
   config.addPlugin(amp, {
     dir: {
       output: '.11ty',

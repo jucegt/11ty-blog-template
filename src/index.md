@@ -1,6 +1,6 @@
 ---
 layout: base
-permalink: index.html
+permalink: /
 ---
 
 # Title

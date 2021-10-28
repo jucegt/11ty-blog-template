@@ -1,0 +1,100 @@
+backend:
+  name: git-gateway
+  repo: jucegt/11ty-blog-template
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+media_folder: /src/content/static/
+public_folder: /
+
+collections:
+  - name: 'authors'
+    label: 'Authors'
+    folder: 'src/content/authors'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+  - name: 'categories'
+    label: 'Categories'
+    folder: 'src/content/categories'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text',
+          pattern:
+            [
+              '.{140,150}',
+              'The excerpt should be between 140 and 150 characters.',
+            ],
+        }
+      - { label: 'Content', name: 'content', widget: 'markdown' }
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'src/content/posts'
+    create: true
+    slug: '{{slug}}-{{month}}{{day}}{{year}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Author',
+          name: 'author',
+          widget: 'relation',
+          collection: 'authors',
+          search_fields: ['name'],
+          value_field: 'name',
+          required: true,
+        }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text',
+          pattern:
+            [
+              '.{140,150}',
+              'The excerpt should be between 140 and 150 characters.',
+            ],
+        }
+      - {
+          label: 'Category',
+          name: 'category',
+          widget: 'relation',
+          collection: 'categories',
+          search_fields: ['title'],
+          value_field: 'title',
+          required: true,
+        }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: image }
+      - { label: 'Content', name: 'content', widget: 'markdown' }
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'src/content/pages'
+    create: true
+    slug: '{{slug}}-{{month}}{{day}}{{year}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Excerpt',
+          name: 'excerpt',
+          widget: 'text',
+          pattern:
+            [
+              '.{140,150}',
+              'The excerpt should be between 140 and 150 characters.',
+            ],
+        }
+      - { label: 'Content', name: 'content', widget: 'markdown' }

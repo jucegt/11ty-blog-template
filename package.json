@@ -20,7 +20,7 @@
     "clean": "rm -rf .11ty/"
   },
   "lint-staged": {
-    "*.js": [
+    "*.@(js|scss)": [
       "yarn format",
       "yarn lint"
     ]

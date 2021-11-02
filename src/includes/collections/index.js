@@ -9,8 +9,6 @@ const collections = (config) => {
   config.addCollection('pages', pages);
   config.addCollection('authors', authors);
   config.addCollection('categories', categories);
-
-  return;
 };
 
 export default collections;

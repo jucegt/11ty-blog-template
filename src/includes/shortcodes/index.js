@@ -1,7 +1,9 @@
-import seo from './metadata';
+import metadata from './metadata';
+import header from './header';
 
 const shortcodes = (config) => {
-  seo(config);
+  metadata(config);
+  header(config);
   return;
 };
 

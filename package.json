@@ -20,10 +20,8 @@
     "clean": "rm -rf .11ty/"
   },
   "lint-staged": {
-    "*.@(js|scss)": [
-      "yarn format",
-      "yarn lint"
-    ]
+    "*.@(js|scss)": "yarn format",
+    "*.js": "yarn lint"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.2",

@@ -1,0 +1,8 @@
+@mixin colors {
+  --white: #fff;
+  --black: #000;
+  --primary: #4da6ff;
+  --light-blue: #f0f2f5;
+  --bg: var(--light-blue);
+  --header-bg: var(--white);
+}

@@ -1,0 +1,15 @@
+// Base
+@use "../base/base" as *;
+
+:root {
+  @include colors; // Added colors in CSS variables
+
+  min-width: 320px;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+}

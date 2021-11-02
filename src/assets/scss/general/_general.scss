@@ -6,3 +6,7 @@
 
 // Header
 @use "../general/header" as *;
+
+body {
+  background: var(--bg);
+}

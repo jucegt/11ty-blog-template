@@ -1,22 +1,17 @@
-// Plugins
-import amp from '@ampproject/eleventy-plugin-amp';
-
 // Includes
 // import collections from './src/includes/collections';
 import shortcodes from './src/includes/shortcodes';
+import plugins from './src/includes/plugins';
+import watchers from './src/includes/watchers';
 
 export default (config) => {
   // collections(config);
   shortcodes(config);
+  plugins(config);
+  watchers(config);
 
   config.ignores.add('./src/admin');
-  config.addPassthroughCopy({ './src/admin': true });
-
-  config.addPlugin(amp, {
-    dir: {
-      output: '.11ty',
-    },
-  });
+  config.addPassthroughCopy('./src/admin');
 
   return {
     dir: {

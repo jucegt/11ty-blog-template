@@ -3,10 +3,9 @@
 
 :root {
   @include colors; // Added colors in CSS variables
+  @include spacing; // Added spacing params in CSS variables
 
   min-width: 320px;
-  position: relative;
-  box-sizing: border-box;
   font-size: 16px;
   font-family: -apple-system, "Rubik", BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

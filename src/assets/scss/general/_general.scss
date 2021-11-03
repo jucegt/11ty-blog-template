@@ -7,6 +7,31 @@
 // Header
 @use "../general/header" as *;
 
+// Footer
+@use "../general/footer" as *;
+
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
 body {
   background: var(--bg);
+}
+
+.logo {
+  svg {
+    display: block;
+    max-width: 130px;
+    max-height: 35px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1566px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }

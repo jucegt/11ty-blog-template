@@ -3,6 +3,10 @@
   --black: #000;
   --primary: #4da6ff;
   --light-blue: #f0f2f5;
+  --black-rgb: 0 0 0;
   --bg: var(--light-blue);
   --header-bg: var(--white);
+  --footer-bg: var(--white);
+  --shadow: var(--black-rgb);
+  --border: var(--black-rgb);
 }

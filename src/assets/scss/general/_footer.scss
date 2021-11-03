@@ -1,0 +1,26 @@
+.footer {
+  margin: 75px 0 0;
+  padding: 15px 0;
+  background: var(--footer-bg);
+  box-shadow: 0 15px 30px rgba(var(--shadow) / 5%);
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &:not(:first-child) {
+      padding: 15px 0 0;
+      margin: 15px 0 0;
+      border-top: 1px solid rgba(var(--shadow) / 10%);
+    }
+  }
+
+  &__icons,
+  &__links,
+  &__copy {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   background: var(--header-bg);
-  padding: 0 15px;
+  padding: 0 var(--gutter);
   min-height: 60px;
-  box-shadow: 0 15px 30px rgba(var(--black) / 5%);
+  box-shadow: 0 15px 30px rgba(var(--shadow) / 5%);
+  margin: 0 0 30px;
 }

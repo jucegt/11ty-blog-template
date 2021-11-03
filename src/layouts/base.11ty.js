@@ -17,13 +17,15 @@ export const render = async (data) => {
       <style amp-custom>
         ${await fs
           .readFile(path.resolve(__dirname, '../assets/css/style.css'))
-          .then((data) => data)}
+          .then((css) => css)}
       </style>
       <link rel="canonical" href="." />
     </head>
     <body>
-      ${this.header()}
+      ${this.header(config)}
       ${content}
+      ${this.footer(config)}
+      ${this.svgs()}
     </body>
   </html>
   `;

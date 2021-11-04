@@ -8,6 +8,9 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    &:first-child {
+      justify-content: space-between;
+    }
     &:not(:first-child) {
       padding: 15px 0 0;
       margin: 15px 0 0;
@@ -15,12 +18,21 @@
     }
   }
 
-  &__icons,
   &__links,
   &__copy {
     flex: 0 0 100%;
     max-width: 100%;
     display: flex;
-    justify-content: center;
+  }
+
+  &__copy {
+    margin: 15px 0 0;
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      margin: 0;
+      color: var(--text-light);
+    }
   }
 }

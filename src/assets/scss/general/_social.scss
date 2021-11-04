@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 20px;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      stroke: var(--white);
+    }
+
+    &.facebook {
+      background: var(--facebook);
+    }
+    &.instagram {
+      background: var(--instagram);
+    }
+    &.twitter {
+      background: var(--twitter);
+    }
+  }
+}

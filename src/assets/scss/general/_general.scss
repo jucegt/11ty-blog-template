@@ -4,34 +4,20 @@
 // Root
 @use "../general/root" as *;
 
+// Body
+@use "../general/body" as *;
+
 // Header
 @use "../general/header" as *;
+
+// Logo
+@use "../general/logo" as *;
+
+// Grid
+@use "../general/grid" as *;
 
 // Footer
 @use "../general/footer" as *;
 
-*,
-*:before,
-*:after {
-  position: relative;
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--bg);
-}
-
-.logo {
-  svg {
-    display: block;
-    max-width: 130px;
-    max-height: 35px;
-  }
-}
-
-.container {
-  width: 100%;
-  max-width: 1566px;
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
+// Social
+@use "../general/social" as *;

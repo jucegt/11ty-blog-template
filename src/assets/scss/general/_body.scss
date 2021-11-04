@@ -1,0 +1,10 @@
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+}

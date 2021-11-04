@@ -1,5 +1,6 @@
 const footer = (config) => {
-  config.addShortcode('footer', (config) => {
+  config.addShortcode('footer', (content, config, texts) => {
+    const year = new Date().getFullYear();
     return /* html */ `
       <footer class="footer">
         <div class="container">
@@ -8,7 +9,7 @@ const footer = (config) => {
               <svg><use xlink:href="#logo" /></svg>
             </a>
             <div class="footer__icons">
-              Icons
+              ${content}
             </div>
           </div>
           <div class="footer__section">
@@ -16,7 +17,7 @@ const footer = (config) => {
               Links
             </div>
             <div class="footer__copy">
-              Icons
+              <p>©${year} ${config.title} - ${texts.copyright}</p>
             </div>
           </div>
         </div>

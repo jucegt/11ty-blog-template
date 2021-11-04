@@ -2,7 +2,9 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export const render = async (data) => {
-  const { content, config } = data;
+  const { content, config, texts } = data;
+  const social = this.social(config);
+
   return /* html */ `
   <!doctype html>
   <html lang="${config.language}">
@@ -24,7 +26,7 @@ export const render = async (data) => {
     <body>
       ${this.header(config)}
       ${content}
-      ${this.footer(config)}
+      ${this.footer(social, config, texts[config.language])}
       ${this.svgs()}
     </body>
   </html>

@@ -1,0 +1,11 @@
+body {
+  animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+}
+@keyframes -amp-start {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}

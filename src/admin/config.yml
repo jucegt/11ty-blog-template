@@ -97,4 +97,5 @@ collections:
               'The excerpt should be between 140 and 150 characters.',
             ],
         }
+      - { label: 'Footer', name: 'footer', widget: 'boolean', default: false }
       - { label: 'Content', name: 'content', widget: 'markdown' }

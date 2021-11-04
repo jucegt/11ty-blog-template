@@ -1,7 +1,3 @@
-import amp from './amp';
-
-const plugins = (config) => {
-  amp(config);
-};
+const plugins = () => {};
 
 export default plugins;

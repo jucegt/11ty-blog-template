@@ -25,13 +25,19 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.2",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.9",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "esm": "^3.2.25",
+    "html-minifier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.11",
+    "posthtml": "^0.16.5",
+    "posthtml-minify-classnames": "^0.3.0",
     "prettier": "^2.4.1",
     "sass": "^1.43.4",
     "stylelint": "^14.0.1",
@@ -40,6 +46,10 @@
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^4.0.0"
   },
+  "browserslist": [
+    "> 0%",
+    "last 4 versions"
+  ],
   "engines": {
     "npm": "PLEASE-USE-YARN",
     "yarn": "^1.22.4",

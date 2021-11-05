@@ -7,19 +7,19 @@ export default {
     {
       url: 'https://www.facebook.com/',
       name: 'Facebook',
-      icon: '#facebook',
+      icon: '#svg-facebook',
       class: 'facebook',
     },
     {
       url: 'https://www.instagram.com/',
       name: 'Instagram',
-      icon: '#instagram',
+      icon: '#svg-instagram',
       class: 'instagram',
     },
     {
       url: 'https://www.twitter.com/',
       name: 'Twitter',
-      icon: '#twitter',
+      icon: '#svg-twitter',
       class: 'twitter',
     },
   ],

@@ -1,6 +1,6 @@
 const social = (config) => {
   config.addShortcode('social', (config, type) => {
-    console.log(type);
+    console.log('Social type: ', type);
     const socials = config.socials
       .map((social) => {
         return /* html */ `

@@ -6,7 +6,7 @@ const footer = (config) => {
         <div class="container">
           <div class="footer__section">
             <a class="logo" href="/" title="${config.title}">
-              <svg><use xlink:href="#svg-logo" /></svg>
+              <svg><use xlink:href="#logo" /></svg>
             </a>
             <div class="footer__icons">
               ${content}

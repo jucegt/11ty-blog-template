@@ -18,8 +18,10 @@ export const render = async (data) => {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <!-- PRELOAD -->
       <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+      <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-bind-0.1.js" />
       <!-- AMP -->
       <script async src="https://cdn.ampproject.org/v0.js"></script>
+      <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
       <!-- FONTS -->
       <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
       <!-- STYLES -->
@@ -42,6 +44,7 @@ export const render = async (data) => {
       ${content}
       ${this.footer(social, config, texts[config.language])}
       ${this.svgs()}
+     <div [class]="menu || search ? 'mask mask--show' : 'mask'" class="mask" on="tap:AMP.setState({menu: false, search: false})"></div>
     </body>
   </html>
   `;

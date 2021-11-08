@@ -1,12 +1,12 @@
 // Includes
-// import collections from './src/includes/collections';
+import collections from './src/includes/collections';
 import shortcodes from './src/includes/shortcodes';
 import plugins from './src/includes/plugins';
 import watchers from './src/includes/watchers';
 import transforms from './src/includes/transforms';
 
 export default (config) => {
-  // collections(config);
+  collections(config);
   shortcodes(config);
   plugins(config);
   watchers(config);

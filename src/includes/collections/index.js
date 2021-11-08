@@ -1,8 +1,8 @@
 // Collections
-import posts from 'posts';
-import pages from 'pages';
-import authors from 'authors';
-import categories from 'categories';
+import posts from './posts';
+import pages from './pages';
+import authors from './authors';
+import categories from './categories';
 
 const collections = (config) => {
   config.addCollection('posts', posts);

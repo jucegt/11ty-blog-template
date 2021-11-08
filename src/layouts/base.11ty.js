@@ -43,8 +43,8 @@ export const render = async (data) => {
       ${this.header(config)}
       ${content}
       ${this.footer(social, config, texts[config.language])}
+      <div [class]="menu || search ? 'mask mask--show' : 'mask'" class="mask" on="tap:AMP.setState({menu: false, search: false})"></div>
       ${this.svgs()}
-     <div [class]="menu || search ? 'mask mask--show' : 'mask'" class="mask" on="tap:AMP.setState({menu: false, search: false})"></div>
     </body>
   </html>
   `;

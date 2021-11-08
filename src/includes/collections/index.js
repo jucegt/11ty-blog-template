@@ -5,10 +5,10 @@ import authors from './authors';
 import categories from './categories';
 
 const collections = (config) => {
-  config.addCollection('posts', posts);
-  config.addCollection('pages', pages);
-  config.addCollection('authors', authors);
-  config.addCollection('categories', categories);
+  posts(config);
+  pages(config);
+  authors(config);
+  categories(config);
 };
 
 export default collections;

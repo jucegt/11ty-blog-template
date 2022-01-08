@@ -1,5 +1,5 @@
 const header = (config) => {
-  config.addShortcode('header', (config) => {
+  config.addShortcode('header', (config, texts) => {
     return /* html */ `
       <header class="header">
         <a href="/" class="logo" title="${config.title}">
@@ -18,8 +18,16 @@ const header = (config) => {
         </nav>
 
         <div [class]="search ? 'header__panel header__panel--show tools' : 'header__panel tools'" class="header__panel tools">
-          <div class="search">Search</div>
-          <div class="mode">Mode</div>
+          <div class="search">
+            <form action-xhr="/api/search/" method="post" target="_top" on="submit:AMP.setState({ query: searchValue })">
+              <input id="search-input" type="text" name="search" placeholder="${texts.search}" on="input-throttled:AMP.setState({ searchValue: event.value })" />
+              <svg><use xlink:href="#search" /></svg>
+            </form>
+          </div>
+          <div class="mode">
+            <a role="button" on="tap:AMP.setState({ dark: true })" class="moon"><svg><use xlink:href="#moon" /></svg></a>
+            <a role="button" on="tap:AMP.setState({ dark: false })" class="sun"><svg><use xlink:href="#sun" /></svg></a>
+          </div>
         </div>
 
         <ul class="header__nav">
@@ -27,17 +35,20 @@ const header = (config) => {
             <a href="/"><svg><use xlink:href="#home" /></svg></a>
           </li>
           <li [class]="search ? 'active' : ''">
-            <a role="button" on="tap:AMP.setState({search: !search, menu: false})">
+            <a role="button" on="tap:AMP.setState({ search: !search, menu: false }),search-input.focus">
               <svg><use xlink:href="#search" /></svg>
             </a>
           </li>
           <li [class]="menu ? 'active' : ''">
-            <a role="button" on="tap:AMP.setState({menu: !menu, search: false})">
+            <a role="button" on="tap:AMP.setState({ menu: !menu, search: false })">
               <svg><use xlink:href="#menu" /></svg>
             </a>
           </li>
           <li>
-            <a role="button"><svg><use xlink:href="#moon" /></svg></a>
+            <div class="mode">
+              <a role="button" on="tap:AMP.setState({ dark: true })" class="moon"><svg><use xlink:href="#moon" /></svg></a>
+              <a role="button" on="tap:AMP.setState({ dark: false })" class="sun"><svg><use xlink:href="#sun" /></svg></a>
+            </div>
           </li>
         </ul>
       </header>

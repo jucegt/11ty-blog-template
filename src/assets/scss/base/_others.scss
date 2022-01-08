@@ -1,0 +1,9 @@
+@mixin others {
+  --shadow-opacity: 5%;
+  --border-opacity: 10%;
+}
+
+@mixin others--dark {
+  --shadow-opacity: 15%;
+  --border-opacity: 5%;
+}

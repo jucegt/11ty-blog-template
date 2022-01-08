@@ -4,18 +4,41 @@
   --gray: #878787;
   --gray-light: #ababab;
   --gray-xlight: #e4e6e9;
+  --gray-emperor: #545454;
+  --gray-cod: #1e1e1e;
+  --gray-dark: #212121;
+  --gray-dove: #6d6d6d;
+  --gray-xdark: #161616;
+  --gray-silver: #c1c1c1;
   --primary: #4da6ff;
   --light-blue: #f0f2f5;
   --black-rgb: 0 0 0;
+  --white-rgb: 255 255 255;
   --facebook: #3b5998;
   --instagram: linear-gradient(to right, #ffd656, #fe523f 50%, #cc39a3 100%);
   --twitter: #03a9f4;
+  --icon: var(--gray);
   --bg: var(--light-blue);
   --header-bg: var(--white);
   --footer-bg: var(--white);
+  --ad-bg: var(--gray-xlight);
   --shadow: var(--black-rgb);
   --border: var(--black-rgb);
   --text-dark: var(--black);
   --text: var(--gray);
+  --text-placeholder: var(--gray);
+  --text-input: var(--black);
   --text-light: var(--gray-light);
+}
+
+@mixin colors--dark {
+  --bg: var(--gray-dark);
+  --header-bg: var(--gray-xdark);
+  --footer-bg: var(--gray-xdark);
+  --text-light: var(--gray-emperor);
+  --ad-bg: var(--gray-cod);
+  --border: var(--white-rgb);
+  --icon: var(--gray-silver);
+  --text-placeholder: var(--gray-dove);
+  --text-input: var(--white);
 }

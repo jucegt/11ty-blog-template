@@ -4,9 +4,14 @@
 :root {
   @include colors; // Added colors in CSS variables
   @include spacing; // Added spacing params in CSS variables
+  @include others; // Others CSS variables
 
   min-width: 320px;
   font-size: 16px;
-  font-family: -apple-system, "Rubik", BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Rubik", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  &.dark {
+    @include colors--dark;
+    @include others--dark;
+  }
 }

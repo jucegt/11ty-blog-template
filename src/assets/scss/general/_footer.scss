@@ -2,7 +2,7 @@
   margin: 75px 0 60px;
   padding: 15px 0;
   background: var(--footer-bg);
-  box-shadow: 0 -15px 30px rgba(var(--shadow) / 5%);
+  box-shadow: 0 -15px 30px rgba(var(--shadow) / var(--shadow-opacity));
   &__section {
     display: flex;
     align-items: center;
@@ -14,7 +14,7 @@
     &:not(:first-child) {
       padding: 15px 0 0;
       margin: 15px 0 0;
-      border-top: 1px solid rgba(var(--shadow) / 10%);
+      border-top: 1px solid rgba(var(--border) / var(--border-opacity));
     }
   }
 

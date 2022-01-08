@@ -8,8 +8,23 @@
 body {
   margin: 0;
   background: var(--bg);
+  transition: background ease 0.2s, color ease 0.2s;
+  * {
+    transition: background ease 0.2s, color ease 0.2s;
+  }
 }
 
+input,
+select,
+textarea {
+  font-family: "Rubik", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
 .mask {
   position: fixed;
   top: 0;

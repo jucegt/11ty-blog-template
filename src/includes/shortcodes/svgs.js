@@ -3,7 +3,7 @@ const svg = (config) => {
     return /* html */ `
       <svg style="display: block; width: 0; height: 0;">
         <symbol id="logo" viewBox="0 0 130 35">
-          <rect width="130" height="35" rx="17.5" opacity="0.05"/>
+          <rect width="130" height="35" rx="17.5" />
         </symbol>
         <symbol id="facebook" viewBox="0 0 13 22">
           <path d="M18,2H15a5,5,0,0,0-5,5v3H7v4h3v8h4V14h3l1-4H14V7a1,1,0,0,1,1-1h3Z" transform="translate(-6 -1)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>

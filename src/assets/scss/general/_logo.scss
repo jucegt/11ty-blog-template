@@ -1,7 +1,9 @@
 .logo {
   svg {
+    fill: var(--logo);
     display: block;
     max-width: 130px;
     max-height: 35px;
+    transition: fill ease 0.2s;
   }
 }

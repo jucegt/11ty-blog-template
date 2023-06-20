@@ -18,5 +18,5 @@
   "parserOptions": {
     "sourceType": "module"
   },
-  "ignorePatterns": ["!.eleventy.js"]
+  "ignorePatterns": ["!.eleventy.js", "src/assets/js/*.js"]
 }

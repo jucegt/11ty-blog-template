@@ -20,10 +20,12 @@
   --icon: var(--gray);
   --bg: var(--light-blue);
   --header-bg: var(--white);
+  --logo: var(--light-blue);
   --footer-bg: var(--white);
   --ad-bg: var(--gray-xlight);
   --shadow: var(--black-rgb);
   --border: var(--black-rgb);
+  --link: var(--black);
   --text-dark: var(--black);
   --text: var(--gray);
   --text-placeholder: var(--gray);
@@ -34,6 +36,7 @@
 @mixin colors--dark {
   --bg: var(--gray-dark);
   --header-bg: var(--gray-xdark);
+  --logo: var(--gray-dark);
   --footer-bg: var(--gray-xdark);
   --text-light: var(--gray-emperor);
   --ad-bg: var(--gray-cod);
@@ -41,4 +44,5 @@
   --icon: var(--gray-silver);
   --text-placeholder: var(--gray-dove);
   --text-input: var(--white);
+  --link: var(--white);
 }

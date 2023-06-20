@@ -1,3 +1,8 @@
+.header-script {
+  opacity: 1;
+  z-index: 100;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -36,7 +41,7 @@
         display: block;
         padding: 8px 0;
         text-decoration: none;
-        color: var(--black);
+        color: var(--link);
       }
     }
 
